@@ -1,0 +1,10 @@
+.background-img {
+  background-image: url("../images/hall1.jpg");
+  max-width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-form {
+  justify-content: center;
+}
