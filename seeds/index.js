@@ -9,7 +9,8 @@ const seedAll = async () => {
   await seedVenuetype();
   console.log('\n----- VENUE TYPES SEEDED -----\n');
   await seedUsers();
-  console.log('--------------');
+  console.log('\n------- USERS SEEDED -------\n');
+  
 
   process.exit(0);
 };
