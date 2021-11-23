@@ -9,18 +9,21 @@
         <h1 class="card-title">Sign-Up Below</h1>
         <div class="mb-2">
 
-          <form class="login-form">
-            <div class="col-sm-12 col-form-label">
-              <label for="username-signup">Username:</label>
-              <input
-                type="text"
-                class="form-control"
-                id="username-signup"
-                placeholder="Enter a username"
-              />
-              </div>
+            <!--First Name-->
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="first_name">First Name:</label>
+              <input type="first_name" class="form-control" id="first_name" placeholder="Enter your First Name" />
+            </div>
 
-              <label for="email-signup" class="form-label">Email:</label>
+            <!--Last Name-->
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="last_name">Last Name:</label>
+              <input type="last_name" class="form-control" id="last_name" placeholder="Enter your Last Name" />
+            </div>
+
+                          <!--Email-->
+
+              <label for="email" class="form-label">Email:</label>
               <input
                 type="email"
                 class="form-control"
@@ -28,9 +31,34 @@
                 placeholder="name@example.com"
               />
             </div>
+
+            <!--Phone number-->
             <div class="col-sm-12 col-form-label mb-3">
-              <label for="password-login">Password:</label>
-              <input type="password" class="form-control" id="password-login" placeholder="Enter a password" />
+              <label for="phone_number">Phone Number:</label>
+              <input type="phone_number" class="form-control" id="phone_number" placeholder="Enter a Phone number" />
+            </div>
+
+                        <!--Position Title-->
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="title">Title:</label>
+              <input type="title" class="form-control" id="title" placeholder="Enter your Title" />
+            </div>
+
+  
+          <!--Username-->
+          <form class="username mb-3">
+            <div class="col-sm-12 col-form-label">
+              <label for="username">Username:</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter a username" />
+              </div>
+
+
+
+          <!--Password-->
+
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="password">Password:</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter a password" />
             </div>
             <div class="col-sm-10">
               <button

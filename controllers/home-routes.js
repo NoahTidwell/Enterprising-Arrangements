@@ -14,4 +14,10 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
+//Dashboard page link:
+router.get("/dashboard", (req, res) => {
+  res.render("dashboard");
+  // { loggedIn: true });
+});
+
 module.exports = router;

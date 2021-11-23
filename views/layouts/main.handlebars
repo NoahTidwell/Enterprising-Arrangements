@@ -40,14 +40,21 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item m-3 fs-5">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              {{!-- {{#if loggedIn}} --}}
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/dashboard"
+              >User Dashboard</a>
+              {{!-- {{/if}} --}}
             </li>
             <li class="nav-item m-3 fs-5">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            {{! <li class="nav-item m-3 fs-5">
               <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item m-3 fs-5">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
+            </li> }}
+
             <li class="nav-item">
               <a class="nav-link" href="/signup">
                 <button
@@ -64,7 +71,6 @@
           </ul>
         </div>
       </div>
-
     </nav>
 
     <!--End Navbar-->
