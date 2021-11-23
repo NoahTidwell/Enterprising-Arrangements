@@ -46,6 +46,18 @@ const venuetypedata = [
     type_name: 'Stately Homes',
     description: 'xxx'
   },
+  {
+    type_name: 'Park and Fields',
+    description: 'xxx'
+  },
+  {
+    type_name: 'Cruise Ships',
+    description: 'xxx'
+  },
+  {
+    type_name: 'Camps and Retreats',
+    description: 'xxx'
+  },
 ];
 
 const seedVenuetype  = () => Venuetype.bulkCreate(venuetypedata );
