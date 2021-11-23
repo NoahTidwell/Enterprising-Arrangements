@@ -62,7 +62,7 @@ router.get('/', (req, res) => {
       )     
         .then(dbData => {
           if (!dbData[0]) {
-            res.status(404).json({ message: 'No Categgory is found with this id' });
+            res.status(404).json({ message: 'No venue type is found with this id' });
             return;
           }
           res.json(dbData);
@@ -81,7 +81,7 @@ router.get('/', (req, res) => {
     })
       .then(dbData => {
         if (!dbData) {
-          res.status(404).json({ message: 'No Category found with this id' });
+          res.status(404).json({ message: 'No venue type found with this id' });
           return;
         }
         res.json(dbData);
