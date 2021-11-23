@@ -24,8 +24,8 @@ Venues.init(
           len: [1]
         } 
     },
-    ur:{
-        type: DataTypes.STRING(50),
+    url:{
+        type: DataTypes.STRING(100),
         validate:{
             isUrl: true,
           } 

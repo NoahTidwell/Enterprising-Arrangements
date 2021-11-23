@@ -20,7 +20,7 @@ User.hasMany(Venues, {
 });
 
 // one venue belongsTo a user
-  Venues.belongsTo(Venuetype, {
+  Venues.belongsTo(User, {
     foreignKey: 'user_id'
   });
   
