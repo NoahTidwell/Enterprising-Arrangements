@@ -7,8 +7,14 @@ router.get('/', (req, res) => {
     include: [
         {
         model: Venuetype,
-        attributes: ['id','type_name'],
-        }],
+        attributes: ['id','type_name','description'],
+        },
+        {
+        model: User,
+        attributes: ['id','first_name', 'last_name', 'email', 'phone_number', 'position_title'],
+        }
+    ],
+      ///user contact info for the venue  (first name, last name, position, phone and email.)
   })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -27,8 +33,14 @@ router.get('/:id', (req, res) => {
       include: [
         {
         model: Venuetype,
-        attributes: ['id','type_name'],
-        }],
+        attributes: ['id','type_name','description'],
+        },
+        {
+        model: User,
+        attributes: ['id','first_name', 'last_name', 'email', 'phone_number', 'position_title'],
+        }
+    ],
+         ///user contact info for the venue  
  })
  .then(dbData => {
     if (!dbData) {
