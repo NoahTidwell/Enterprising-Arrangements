@@ -22,14 +22,13 @@ Venuetype.init(
         }
     },
     description: {
-        type: DataTypes.STRING(50),
+        type: DataTypes.STRING(150),
         allowNull: false,
         validate:{
           len: [1]
         } 
     },
   },  
-  
   {
     sequelize,
     timestamps: false,

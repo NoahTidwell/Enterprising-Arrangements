@@ -6,7 +6,7 @@ const userdata = [
     first_name: 'Ales',
     last_name: 'Monde',
     email: 'alesmonde0@mail.com',
-    phone_number: '555-1234',
+    phone_number: '970.923.4310',
     position_title: 'Manager',
     username: 'alesmonde0',
     password: 'password123'
@@ -15,7 +15,7 @@ const userdata = [
     first_name: 'Jay',
     last_name: 'Willoughway',
     email: 'jwilloughway1@mail.com',
-    phone_number: '555-1235',
+    phone_number: '1-855-517-7333',
     position_title: 'Head Manager',
     username: 'jwilloughway1',
     password: 'password123'
