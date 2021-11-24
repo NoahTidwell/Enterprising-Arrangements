@@ -45,7 +45,7 @@ npm install express-handlebars
 npm install express-session connect-session-sequelize
 
 ## Usage:
-This project is used to search and post venues in your local area. Conglomerate all venue types from multiple owners onto on site for users to have easy access to the information they need. Or Sign Up and Login to post, edit, or delete venues from the site.
+This project is used to search and post venues in your local area. Conglomerate all venue types from multiple venue owners on the site for viewers to have easy access to the information they need. Or Sign Up and Login to post, edit, or delete venues from the site.
 
 ## License:
 MIT
