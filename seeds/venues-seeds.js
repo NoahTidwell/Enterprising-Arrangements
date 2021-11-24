@@ -11,6 +11,7 @@ const venuesdata = [
     zipcode: 81615,
     min: 15,
     max: 1100,
+    third_party_vendors: false,
     venuetype_id: 3,
     user_id: 1
   },
@@ -23,6 +24,7 @@ const venuesdata = [
     zipcode: 77040,
     min: 1,
     max: 60,
+    third_party_vendors: true,
     venuetype_id: 2,
     user_id: 2
   },
@@ -35,6 +37,7 @@ const venuesdata = [
     zipcode: 78238,
     min: 1,
     max: 50,
+    third_party_vendors: true,
     venuetype_id: 2,
     user_id: 2
   },

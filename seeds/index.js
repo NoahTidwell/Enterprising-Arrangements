@@ -13,6 +13,7 @@ const seedAll = async () => {
   console.log('\n------- USERS SEEDED -------\n');
   await seedVenues();
   console.log('\n------- VENUES SEEDED -------\n');
+  
 
   process.exit(0);
 };
