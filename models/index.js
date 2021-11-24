@@ -1,7 +1,7 @@
 // import all models
 const User = require('./User');
-const Venuetype= require('./Venuetype')
-const Venues = require('./Venues')
+const Venuetype= require('./venuetype');
+const Venues = require('./venues');
 
 // create associations
 // venuetype have many  venues
