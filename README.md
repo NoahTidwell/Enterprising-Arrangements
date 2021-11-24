@@ -20,6 +20,7 @@ GIVEN a CMS-style venue search application, WHEN I visit the site for the first 
 ## Installation:
 This application uses node.js, express, mysql2,sequelize, and dotenv modules. To install necessary dependecies, run the following commands:
 <br />
+<br />
 npm init
 <br />
 npm install express sequelize mysql2
