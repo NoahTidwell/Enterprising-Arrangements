@@ -15,7 +15,18 @@
 - [Additional Info](#additional-info)
 
 ## Description:
-GIVEN a CMS-style venue search application, WHEN I visit the site for the first time THEN I am presented with a homepage and an existing venue, WHEN I click on Home I am taken to the Homepage, WHEN I click Dahsboard THEN I am taken to the Dashboard Page, WHEN I click Sign Up THEN I am taken to the Sign Up Page and prompted with several required inputs, WHEN I create an account THEN I can sign in and post, edit, or delete venues from the site, WHEN I click sign out THEN My session ends and I no longer have access to creating, editing, or deleting venues from the site.
+GIVEN a CMS-style venue search application
+<br /> WHEN I visit the site for the first time 
+<br /> THEN I am presented with a homepage and an existing venue
+<br /> WHEN I click on Home
+<br /> THEN I am taken to the Homepage
+<br /> WHEN I click Dahsboard
+<br /> THEN I am taken to the Dashboard Page 
+<br /> WHEN I click Sign Up 
+<br /> THEN I am taken to the Sign Up Page and prompted with several required inputs <br /> WHEN I create an account 
+<br /> THEN I can sign in and post, edit, or delete venues from the site
+<br /> WHEN I click sign out 
+<br /> THEN My session ends and I no longer have access to creating, editing, or deleting venues from the site.
 
 ## Installation:
 This application uses node.js, express, mysql2,sequelize, and dotenv modules. To install necessary dependecies, run the following commands:
