@@ -1,9 +1,13 @@
 const router = require('express').Router();
-const { User} = require('../../models');
+const { User, Venues} = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
   User.findAll({
+    include: {
+      model: Venues,
+      attributes: ['id', 'name', 'url', 'street', 'city', 'state', 'min', 'max', 'zipcode', 'third_party_vendors']
+    },
     attributes: { exclude: ['password'] }
     //includde venue per user
   })
@@ -16,6 +20,10 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   User.findOne({
+    include: {
+      model: Venues,
+      attributes: ['id', 'name', 'url', 'street', 'city', 'state', 'min', 'max', 'zipcode', 'third_party_vendors']
+    },
     attributes: { exclude: ['password'] },
     where: {
       id: req.params.id
