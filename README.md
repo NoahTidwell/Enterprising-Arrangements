@@ -1,7 +1,7 @@
 # Enterprising Arrangements
 
 ## Demo Link:
-[Demo Link](https://immense-thicket-65501.herokuapp.com/)
+[Enterprising Arrangements Link](https://immense-thicket-65501.herokuapp.com/)
 
 ## Licensing:
 [![license](https://img.shields.io/badge/license-MIT-blue)](https://shields.io)
@@ -57,6 +57,6 @@ Github Pull Request, Issue, or Reach out to a current contributor.
 This product can be tested through the demo link.
 
 ## Contact Info:
-- Github: [NoahTidwell](https://github.com/NoahTidwell), [Ivonnor1975](https://github.com/Ivonnor1975), [JeffGoji](https://github.com/JeffGoji)
+- Github: [Noah Tidwell](https://github.com/NoahTidwell), [Ivonne Fernandez](https://github.com/Ivonnor1975), [Jeff Lester](https://github.com/JeffGoji)
 - Email: ntidwell34@yahoo.com, ivonne@jjf.com, jeff.lester01@outlook.com
 
