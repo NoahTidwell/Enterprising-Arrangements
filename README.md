@@ -1,4 +1,4 @@
-# The-Venue-Planners
+# The Venue Planners
 
 ## Demo Link:
 [Demo Link](https://immense-thicket-65501.herokuapp.com/)
@@ -18,10 +18,17 @@
 GIVEN a CMS-style venue search tool, WHEN I visit the site for the first time THEN I am presented with a homepage and an existing venue, WHEN I click on Home I am taken to the Homepage, WHEN I click Dahsboard THEN I am taken to the Dashboard Page, WHEN I click Sign Up THEN I am taken to the Sign Up Page and prompted with several required inputs, WHEN I create an account THEN I can sign in and post, edit, or delete venues from the site, WHEN I click sign out THEN My session ends and I no longer have access to creating, editing, or deleting venues from the site.
 
 ## Installation:
-This application uses node.js, express, mysql2,sequelize, and dotenv modules
+This application uses node.js, express, mysql2,sequelize, and dotenv modules. To install necessary dependecies, run the following commands:
+
+npm init 
+npm install express sequelize mysql2 
+npm install dotenv 
+npm install bcrypt 
+npm install express-handlebars 
+npm install express-session connect-session-sequelize
 
 ## Usage:
-This project is used to search and post venues in your local area. Conglomerate all venue types from multiple owners onto on site for users to have easy access to the information they need.
+This project is used to search and post venues in your local area. Conglomerate all venue types from multiple owners onto on site for users to have easy access to the information they need. Or Sign Up and Login to post, edit, or delete venues from the site.
 
 ## License:
 MIT
