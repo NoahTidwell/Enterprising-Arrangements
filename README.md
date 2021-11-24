@@ -1,4 +1,4 @@
-# The Venue Planners
+# Enterprising Arrangements
 
 ## Demo Link:
 [Demo Link](https://immense-thicket-65501.herokuapp.com/)
