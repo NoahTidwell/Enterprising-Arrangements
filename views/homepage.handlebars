@@ -1,18 +1,82 @@
-<ol class="post-list">
-  {{!-- {{#each posts as |post|}}
-  <li>
-    <article class="post">
-      <div class="title">
-        <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-        <span>({{post.post_url}})</span>
+    <!--Header-->
+
+    <header class="container-fluid p-5 background-img">
+
+        <div class="card border-dark mb-3 bg-light" style="max-width: 35rem; --bs-bg-opacity: .7;">
+            <div class="card-body">
+                <h1 class="card-title">Join Us and get started!</h1>
+                <p class="card-text">Sign up today to find your event venue! It is free and only takes a couple of
+                    minutes!</p>
+            </div>
+            <div><a class="nav-link" href="/signup"> <button type="button" class="btn btn-primary btn-lg m-0 rounded-5 w-45">Sign-Up
+                        for
+                        Free</button>
+
+                    <a class="nav-link" href="/login"> <button type="button"
+                            class="btn btn-success btn-lg m-0 rounded-5 w-45">Sign-In</button></a>
+            </div>
+        </div>
+
+    </header>
+
+    <!--End of Header Section-->
+
+
+<seciton class="container-lg">
+  <div class="row m-1">
+
+    <!--Main Content Section-->
+
+    <main class="col-lg-7 text-dark m-2 mb-5">
+      <h2>Locating a Venue has never been easier!</h2>
+      <p>Simply sign up and begin searching for a venue local to you!
+        <br />
+        suscipit, eius quae atque unde esse vitae illo? Repellat libero quas
+        aliquid, nihil sequi asperiores adipisci. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Qui hic autem sequi iusto repudiandae
+        cumque! Repellendus officiis sit, ratione, deleniti magnam, omnis
+        voluptates mollitia repellat impedit perspiciatis architecto modi porro?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quis
+        eveniet amet, quidem voluptate provident nesciunt nobis necessitatibus
+        quae sint voluptatum iste, consequatur minus pariatur? Perspiciatis
+        voluptates provident delectus maiores.
+      </p>
+    </main>
+
+    <!--Area to place Venue Cards-->
+    <div class="col-lg-4">
+      <div class="card h-100">
+        <h1 class="text-center">The Revaire</h1>
+        <img src="../images/temp.jfif" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title text-center">The Springs</h5>
+          <p class="card-text">Tucked away in the forests of Northwest Houston,
+            this exquisite venue will bring to life your fairytale wedding
+            fantasies. This resplendent venue can offer you the space for an
+            extravagant gala or be transformed for secluded, intimate affair.</p>
+        </div>
+        <div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">12612 Malcomson Road Houston, TX 77070</li>
+            <li class="list-group-item list-group-flush">Capacity 2 to 320 guest</li>
+            <li class="list-group-item list-group-flush">Allows 3rd party
+              vendors? Yes</li>
+            <!-- <li class="list-group-item list-group-flush"></li> -->
+            <li class="list-group-item list-group-flush"><a
+                href="#"
+              >Website</a></li>
+
+          </ul>
+
+        </div>
+        <div class="card-footer">
+          <footer class="text-black text-center fw-bold fs-4">Login to see More
+            Details</footer>
+        </div>
       </div>
-      <div class="meta">
-        {{post.vote_count}} point(s) by {{post.user.username}} on
-        {{post.created_at}}
-        |
-        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-      </div>
-    </article>
-  </li>
-  {{/each}} --}}
-</ol>
+
+    </div>
+    <!--End of main content Seciton-->
+
+  </div>
+</seciton>
