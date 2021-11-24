@@ -1,33 +1,45 @@
-# My Project 2
+# The Venue Planners
 
-## Description
+## Demo Link:
+[Demo Link](https://immense-thicket-65501.herokuapp.com/)
 
-![License](https://img.shields.io/badge/license-MIT-Blue.svg)
-## Table of Contents
+## Licensing:
+[![license](https://img.shields.io/badge/license-MIT-blue)](https://shields.io)
 
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Licence](#license)
-  * [test](#test)
+## Table of Contents 
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Testing](#testing)
+- [Additional Info](#additional-info)
 
-## Installation
-This application uses node.js, express, mysql2,sequelize, and dotenv modules
+## Description:
+GIVEN a CMS-style venue search tool, WHEN I visit the site for the first time THEN I am presented with a homepage and an existing venue, WHEN I click on Home I am taken to the Homepage, WHEN I click Dahsboard THEN I am taken to the Dashboard Page, WHEN I click Sign Up THEN I am taken to the Sign Up Page and prompted with several required inputs, WHEN I create an account THEN I can sign in and post, edit, or delete venues from the site, WHEN I click sign out THEN My session ends and I no longer have access to creating, editing, or deleting venues from the site.
 
-To install necessary dependecies, run the following commands:
+## Installation:
+This application uses node.js, express, mysql2,sequelize, and dotenv modules. To install necessary dependecies, run the following commands:
 
-npm init
-npm install express sequelize mysql2
-npm install dotenv
-npm install bcrypt
-npm install express-handlebars
-npm i express-session connect-session-sequelize
+npm init 
+npm install express sequelize mysql2 
+npm install dotenv 
+npm install bcrypt 
+npm install express-handlebars 
+npm install express-session connect-session-sequelize
 
-## Usage
+## Usage:
+This project is used to search and post venues in your local area. Conglomerate all venue types from multiple owners onto on site for users to have easy access to the information they need. Or Sign Up and Login to post, edit, or delete venues from the site.
 
-## License
-This project is licensed under the MIT
+## License:
+MIT
 
-Link: https://opensource.org/licenses/MIT
+## Contribution:
+Github Pull Request, Issue, or Reach out to a current contributor.
 
-# Test
-There is not test in this project.
+## Testing:
+This product can be tested through the demo link.
+
+## Contact Info:
+- Github: [NoahTidwell](https://github.com/NoahTidwell), [Ivonnor1975](https://github.com/Ivonnor1975), [JeffGoji](https://github.com/JeffGoji)
+- Email: ntidwell34@yahoo.com, ivonne@jjf.com, jeff.lester01@outlook.com
+
