@@ -32,17 +32,24 @@ GIVEN a CMS-style venue search application
 This application uses node.js, express, mysql2,sequelize, and dotenv modules. To install necessary dependecies, run the following commands:
 <br />
 <br />
-npm init
 <br />
-npm install express sequelize mysql2
+npm install mysql2
 <br />
 npm install dotenv
+<br />
+Create .env file with proper credentials
 <br />
 npm install bcrypt
 <br />
 npm install express-handlebars 
 <br />
-npm install express-session connect-session-sequelize
+npm install connect-session-sequelize
+<br />
+Access mySQL Terminal and run <strong>source db/schema.sql</strong> to create the database. Exit mySQL terminal after successful creation.
+<br />
+Run <strong>node seeds/index.js</strong> to create the tables and seed with placeholder data.
+<br />
+Run <strong>node server.js</strong> to create the server and be able to access in local host port.
 
 ## Usage:
 This project is used to search and post venues in your local area. Conglomerate all venue types from multiple venue owners on the site for viewers to have easy access to the information they need. Or Sign Up and Login to post, edit, or delete venues from the site.
