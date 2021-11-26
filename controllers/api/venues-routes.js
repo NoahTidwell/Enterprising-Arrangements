@@ -14,7 +14,6 @@ router.get('/', (req, res) => {
         attributes: ['id','first_name', 'last_name', 'email', 'phone_number', 'position_title'],
         }
     ],
-      ///user contact info for the venue  (first name, last name, position, phone and email.)
   })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -40,7 +39,6 @@ router.get('/:id', (req, res) => {
         attributes: ['id','first_name', 'last_name', 'email', 'phone_number', 'position_title'],
         }
     ],
-         ///user contact info for the venue  
  })
  .then(dbData => {
     if (!dbData) {
@@ -56,70 +54,49 @@ router.get('/:id', (req, res) => {
 });
 
 // create new venue
-// router.post('/', (req, res) => {
-//   Venues.create(req.body)
-//     .then((product) => {
-//       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
-//       if (req.body.tagIds.length) {
-//         const productTagIdArr = req.body.tagIds.map((tag_id) => {
-//           return {
-//             product_id: product.id,
-//             tag_id,
-//           };
-//         });
-//         return ProductTag.bulkCreate(productTagIdArr);
-//       }
-//       // if no product tags, just respond
-//       res.status(200).json(product);
-//     })
-//     .then((productTagIds) => res.status(200).json(productTagIds))
-//     .catch((err) => {
-//       console.log(err);
-//       res.status(400).json(err);
-//     });
-// });
+router.post('/', (req, res) => {
+  // expects {username: 'Lernantino', password: 'password1234'}
+  Venues.create({
+    name: req.body.name,
+    url: req.body.url,
+    street: req.body.street,
+    city: req.body.city,
+    state: req.body.state,
+    zipcode: req.body.zipcode,
+    min: req.body.min,
+    max: req.body.max,
+    third_party_vendors: req.body.third_party_vendors,
+    venuetype_id: req.body.venuetype_id,
+    user_id: req.body.user_id
+  })
+    .then(dbUserData => {
+      res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
-// // update product
-// router.put('/:id', (req, res) => {
-//   // update product data
-//   Venues.update(req.body, {
-//     where: {
-//       id: req.params.id,
-//     },
-//   })
-//     .then((product) => {
-//       // find all associated tags from ProductTag
-//       return ProductTag.findAll({ where: { product_id: req.params.id } });
-//     })
-//     .then((productTags) => {
-//       // get list of current tag_ids
-//       const productTagIds = productTags.map(({ tag_id }) => tag_id);
-//       // create filtered list of new tag_ids
-//       const newProductTags = req.body.tagIds
-//         .filter((tag_id) => !productTagIds.includes(tag_id))
-//         .map((tag_id) => {
-//           return {
-//             product_id: req.params.id,
-//             tag_id,
-//           };
-//         });
-//       // figure out which ones to remove
-//       const productTagsToRemove = productTags
-//         .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
-//         .map(({ id }) => id);
-
-//       // run both actions
-//       return Promise.all([
-//         ProductTag.destroy({ where: { id: productTagsToRemove } }),
-//         ProductTag.bulkCreate(newProductTags),
-//       ]);
-//     })
-//     .then((updatedProductTags) => res.json(updatedProductTags))
-//     .catch((err) => {
-//       // console.log(err);
-//       res.status(400).json(err);
-//     });
-// });
+// update venues
+router.put('/:id', (req, res) => {
+   Venues.update(req.body, {
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(dbData => {
+        if (!dbData) {
+          res.status(404).json({ message: 'No Venue found with this id' });
+          return;
+        }
+        res.json(dbData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
 
 router.delete('/:id', (req, res) => {
   // delete one venue by its `id` value
