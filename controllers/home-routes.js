@@ -1,10 +1,33 @@
-const { Venuetype, Venues } = require("../models");
+const {User, Venuetype, Venues } = require("../models");
 
 const router = require("express").Router();
 
-router.get("/", (req, res) => {
-  res.render("homepage");
-});
+router.get('/', (req, res) => {
+    console.log('======================');
+    Venues.findAll({
+      include: [
+          {
+          model: Venuetype,
+          attributes: ['id','type_name','description'],
+          },
+          {
+          model: User,
+          attributes: ['id','first_name', 'last_name', 'email', 'phone_number', 'position_title'],
+          }
+      ],
+    })
+    .then(dbPostData => {
+          const dvenues = dbPostData.map(post => post.get({ plain: true }));
+          res.render('homepage', {
+          dvenues,
+          loggedIn: req.session.loggedIn
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
 
 //Single Card Route
 router.get("/", (req, res) => {
@@ -31,39 +54,4 @@ router.get("/dashboard", (req, res) => {
   // { loggedIn: true });
 });
 
-//==============================================================
-
-// get all posts for homepage
-router.get("/", (req, res) => {
-  console.log("======================");
-  Post.findAll({
-    attributes: ["id", "post_url", "title", "created_at"],
-    include: [
-      {
-        model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
-        include: {
-          model: User,
-          attributes: ["username"],
-        },
-      },
-      {
-        model: User,
-        attributes: ["username"],
-      },
-    ],
-  })
-    .then((dbPostData) => {
-      const posts = dbPostData.map((post) => post.get({ plain: true }));
-
-      res.render("homepage", {
-        posts,
-        loggedIn: req.session.loggedIn,
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
 module.exports = router;

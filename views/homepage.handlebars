@@ -20,12 +20,17 @@
     </header>
 
     <!--End of Header Section-->
-
+<ol class="post-list">
+  {{#each dvenues as |venue|}}
+  <li>
+    {{> single-card venue }}
+  </li>
+  {{/each}}
+</ol>
 
 <seciton class="container-lg">
   <div class="row m-1">
-
-    <!--Main Content Section-->
+     <!--Main Content Section-->
 
     <main class="col-lg-7 text-dark m-2 mb-5">
       <h2>Locating a Venue has never been easier!</h2>
