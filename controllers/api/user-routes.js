@@ -174,12 +174,9 @@ router.put('/:id', (req, res) => {
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
-
-
       res.json({ user: dbUserData, message: "You are now logged in!" });
     });
   });
-});
 
 //Logout function:
 router.post("/logout", (req, res) => {
