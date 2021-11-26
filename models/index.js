@@ -3,7 +3,6 @@ const User = require("./User");
 const Venuetype = require("./venuetype");
 const Venues = require("./venues");
 const homeRoutes = require("./");
-const Dashboard = require("./dashboard-routes");
 
 // create associations
 // venuetype have many  venues
