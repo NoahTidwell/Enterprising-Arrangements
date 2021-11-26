@@ -1,0 +1,22 @@
+<div class="card-body">
+  <h5 class="card-title text-center">Names{{#for venue.name}}</h5>
+  <p class="card-text">{{venues.description}}</p>
+</div>
+<div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{url}}</li>
+    <li class="list-group-item list-group-flush">{{street}},
+      {{city}},
+      {{state}},
+      {{zipcode}}</li>
+    <li class="list-group-item list-group-flush">Min Occupancy: {{min}}</li>
+    <li class="list-group-item list-group-flush">Max Occupancy: {{max}}</li>
+    <li class="list-group-item list-group-flush">Third party vendors:
+      {{third_party_vendors}}</li>
+    <li class="list-group-item list-group-flush">{{type_name}}</li>
+    <!-- <li class="list-group-item list-group-flush"></li> -->
+    <li class="list-group-item list-group-flush"><a href="#">Website</a></li>
+
+  </ul>
+
+</div>

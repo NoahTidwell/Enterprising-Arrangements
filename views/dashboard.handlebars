@@ -8,6 +8,8 @@
   <h2>Create New Venue</h2>
   <p>Enter your details below to create a new venue</p>
 
+{{!-- <a href="/cards/{{post.id}}"></a> --}}
+
   <form class="new-post-form">
     <div>
       <label for="post-title">Title</label>
@@ -27,7 +29,13 @@
   <div class="row m-1">
       <h2 class="text-center mt-3">Venues</h2>
     <div class="row row-cols-1 row-cols-md-4 g-4">
- <div class="col">
+
+{{>single-card}}
+{{>single-card}}
+{{>single-card}}
+
+
+ {{!-- <div class="col">
     <div class="card">
         <h1 class="text-center">Title</h1>
         <img src="../images/temp.jfif" class="card-img-top" alt="..." />
@@ -115,29 +123,32 @@
         </div>
     </div>
   </div>
-  </section>
+  </section> --}}
 
-    {{!-- <!--Venu Card Template:-->
-    <div class="col-lg-4">
+    <!--Venu Card Template:-->
+    {{!-- <div class="col-lg-4">
       <div class="card h-100">
         <h1 class="text-center">Title</h1>
-        <img src="../images/temp.jfif" class="card-img-top" alt="..." />
+        {{!-- <img src="../images/temp.jfif" class="card-img-top" alt="..." /> --}}
         <div class="card-body">
-          <h5 class="card-title text-center">The Springs</h5>
-          <p class="card-text">Description</p>
+          <h5 class="card-title text-center">{{venues.name}}</h5>
+          <p class="card-text">{{description}}</p>
         </div>
         <div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">address</li>
-            <li class="list-group-item list-group-flush">Capacity</li>
-            <li class="list-group-item list-group-flush">third party</li>
+            <li class="list-group-item">{{url}}</li>
+            <li class="list-group-item list-group-flush">{{street}}, {{city}}, {{state}}, {{zipcode}}</li>
+            <li class="list-group-item list-group-flush">Min Occupancy: {{min}}</li>
+            <li class="list-group-item list-group-flush">Max Occupancy: {{max}}</li>
+            <li class="list-group-item list-group-flush">Third party vendors: {{third_party_vendors}}</li>
+            <li class="list-group-item list-group-flush">{{type_name}}</li>
             <!-- <li class="list-group-item list-group-flush"></li> -->
             <li class="list-group-item list-group-flush"><a
                 href="#"
               >Website</a></li>
 
           </ul>
-
+          
         </div>
       </div> --}}
 
