@@ -40,34 +40,36 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item m-3 fs-5">
-              {{!-- {{#if loggedIn}} --}}
-              <a
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            {{#if loggedIn}}
+            <li class="nav-item m-3 fs-5">
+               <a
                 class="nav-link active"
                 aria-current="page"
                 href="/dashboard"
-              >User Dashboard</a>
-              {{!-- {{/if}} --}}
+                >User Dashboard</a>
             </li>
             <li class="nav-item m-3 fs-5">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+               <a class="nav-link" href="/logout"></a>
+                <button id="logout" type="button" class="btn btn-dark btn-lg rounded-pill mt-2">logout</button>
+                </li>
             </li>
-            {{! <li class="nav-item m-3 fs-5">
-              <a class="nav-link" href="#">Features</a>
-            </li> }}
-
-            <li class="nav-item">
-              <a class="nav-link" href="/signup">
-                <button
-                  type="button"
-                  class="btn btn-dark btn-lg rounded-pill mt-2"
-                >Sign-Up</button></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/login"><button
-                  type="button"
-                  class="btn btn-dark btn-lg rounded-pill mt-2"
-                >Sign-In</button></a>
-            </li>
+            {{else}}
+                <li class="nav-item">
+                  <a class="nav-link" href="/signup">
+                    <button
+                      type="button"
+                      class="btn btn-dark btn-lg rounded-pill mt-2"
+                    >Sign-Up</button></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/login"><button
+                      type="button"
+                      class="btn btn-dark btn-lg rounded-pill mt-2"
+                    >Sign-In</button></a>
+                </li>
+            {{/if}}
           </ul>
         </div>
       </div>
@@ -83,7 +85,9 @@
     <footer class="bg-dark text-light text-center mt-5">Built by Noah, Ivonne,
       and Jeff</footer>
     <!--End of Footer section-->
-
+    {{#if loggedIn}}
+         <script src="/javascript/logout.js"></script>
+    {{/if}}
     <!-- Bootstrap Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -91,5 +95,4 @@
       crossorigin="anonymous"
     ></script>
   </body>
-
 </html>
