@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
 
 //router.get('/edit/:id', withAuth, (req, res) => {
 router.get('/edit/:id', (req, res) => {
-    venues.findByPk(req.params.id, {
+    Venues.findByPk(req.params.id, {
     include: [
     {
         model: Venuetype,
@@ -58,10 +58,10 @@ router.get('/edit/:id', (req, res) => {
 .then(dbData => {
        if (dbData) {
           const dvenues = dbData.get({ plain: true });
-//         res.render('edit-venue', {
-//          dvenues,
-//           loggedIn: true
-//         });
+            res.render('edit-venue', {
+              dvenues,
+              loggedIn: true
+         });
        } else {
          res.status(404).end();
       }
