@@ -1,6 +1,6 @@
-const { User, Venuetype, Venues } = require("../models");
-
 const router = require("express").Router();
+const sequelize = require('../config/connection');
+const {User, Venuetype, Venues } = require("../models");
 
 //Get ALL cards:
 router.get("/", (req, res) => {
@@ -37,11 +37,6 @@ router.get("/", (req, res) => {
     });
 });
 
-//Single Card Route
-router.get("/", (req, res) => {
-  res.render("single-card");
-});
-
 //Login Page link:
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
@@ -54,12 +49,6 @@ router.get("/login", (req, res) => {
 //Sign-up page link:
 router.get("/signup", (req, res) => {
   res.render("signup");
-});
-
-//Dashboard page link:
-router.get("/dashboard", (req, res) => {
-  res.render("dashboard");
-  // { loggedIn: true });
 });
 
 module.exports = router;
