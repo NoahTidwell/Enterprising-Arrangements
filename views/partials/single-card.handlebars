@@ -1,28 +1,29 @@
-<div class="card-body">
-  <h5 class="card-title text-center">Names{{title}}</h5>
-  <p class="card-text">{{venues.description}}</p>
+<div
+  class="card m-3 card-border border-1 shadow-sm mb-5 bg-body rounded"
+  style="max-width: 25rem;"
+>
+  <h5 class="card-header text-center text-white bg-primary">{{name}}</h5>
+  <h6 class="text-center">{{venuetype.type_name}}</h6>
+  <p class="card-text">{{venuetype.description}}</p>
+  <div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item text-center"><a href=" {{url}} ">
+          {{url}}
+        </a></li>
+      <li class="list-group-item list-group-flush">{{street}},
+        {{city}},
+        {{state}},
+        {{zipcode}}</li>
+      <li class="list-group-item list-group-flush">Min Occupancy:
+        {{min}}</li>
+      <li class="list-group-item list-group-flush">Max Occupancy:
+        {{max}}</li>
+      <li class="list-group-item list-group-flush">Third party vendors:
+        {{third_party_vendors}}</li>
+
+      <!-- <li class="list-group-item list-group-flush"></li> -->
+
+    </ul>
+    <div class="card-footer"></div>
+  </div>
 </div>
-<div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">{{url}}</li>
-    <li class="list-group-item list-group-flush">{{street}},
-      {{city}},
-      {{state}},
-      {{zipcode}}</li>
-    <li class="list-group-item list-group-flush">Min Occupancy: {{min}}</li>
-    <li class="list-group-item list-group-flush">Max Occupancy: {{max}}</li>
-    <li class="list-group-item list-group-flush">Third party vendors:
-      {{third_party_vendors}}</li>
-    <li class="list-group-item list-group-flush">{{type_name}}</li>
-    <!-- <li class="list-group-item list-group-flush"></li> -->
-    <li class="list-group-item list-group-flush"><a href="#">Website</a></li>
-
-  </ul>
-
-</div>
-
-<script>
-  let jsonStrLookup = document.getElementById('title').innerHTML let js =
-  JSON.parse(jsonStrLookup) console.log(js)
-
-</script>
