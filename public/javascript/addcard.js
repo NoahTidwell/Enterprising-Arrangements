@@ -1,14 +1,34 @@
 async function newFormHandler(event) {
   event.preventDefault();
 
-  const title = document.querySelector('input[name="title"]').value;
-  const url = document.querySelector('input[name="url"]').value;
+  const name = document.querySelector("#name").value;
+  const url = document.querySelector("#url").value;
+  const street = document.querySelector("#street").value;
+  const city = document.querySelector("#city").value;
+  const state = document.querySelector("#state").value;
+  const zipcode = document.querySelector("#zipcode").value;
+  const min = document.querySelector("#min").value;
+  const max = document.querySelector("#max").value;
+  // const third_party_vendors = document.querySelector(
+  //   'input[name="third_party_vendors"]'
+  // ).value;
+
+  // const  = document.querySelector('input[name=""]').value;
+  // const  = document.querySelector('input[name=""]').value;
+  // const  = document.querySelector('input[name=""]').value;
+  // const  = document.querySelector('input[name=""]').value;
 
   const response = await fetch(`/api/venues`, {
     method: "POST",
     body: JSON.stringify({
-      title,
+      name,
       url,
+      street,
+      city,
+      state,
+      zipcode,
+      min,
+      max,
     }),
     headers: {
       "Content-Type": "application/json",

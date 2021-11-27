@@ -1,31 +1,110 @@
 
-<section class="container-flex">
+<section class="container-fluid">
     <div class="row mt-3">
-        <h1 class="text-center bg-light">Dashboard</h1>
-    <main class="col-lg-3 mt-2">
+      <h1 class="text-center bg-light">Dashboard</h1>
+        <div class="col-lg-4 mt-2 m-4">
 
-<div class="m-2">
   <h2>Create New Venue</h2>
   <p>Enter your details below to create a new venue</p>
 
+  <form class="new-post-form">
+            <!--Venue Name-->
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="name">Name of Venue:</label>
+              <input type="name" class="form-control" id="name" placeholder="Enter Name of Venue" />
+            </div>
+
+            <!--Venue Type-->
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="venuetype.type_name">Type of Venue:</label>
+              <input type="venuetype.type_name" class="form-control" id="venuetype.type_name" placeholder="Enter your Venue Type" />
+            </div>
+
+            
+            <!--Venue URL-->
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="url">Venue Website:</label>
+              <input type="url" class="form-control" id="url" placeholder="Enter your Venue Type" />
+            </div>
+
+
+                          
+            <!--Street address-->
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="street" class="form-label">Street Address:</label>
+              <input
+                type="street"
+                class="form-control"
+                id="street"
+                placeholder="Street Address" />
+            </div>
+
+            <!--City-->
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="city">City:</label>
+              <input type="city" class="form-control" id="city" placeholder="Enter a Phone number" />
+            </div>
+
+            <!--State-->
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="state">State:</label>
+              <input type="state" class="form-control" id="state" placeholder="Enter the State" />
+            </div>
+
+  
+          <!--Zipcode-->
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="zipcode">State:</label>
+              <input type="zipcode" class="form-control" id="zipcode" placeholder="Enter the Zipcode" />
+            </div>
+
+
+
+          <!--Minimum Occupancy-->
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="min">Minimum Occupancy</label>
+              <input type="min" class="form-control" id="min" placeholder="Enter a Minimum Occupancy" />
+            </div>
+
+          <!--Maximum Occupancy-->
+             <div class="col-sm-12 col-form-label mb-3">
+              <label for="max">Maximum Occupancy</label>
+              <input type="max" class="form-control" id="max" placeholder="Enter a Minimum Occupancy" />
+            </div>
+
+          {{!-- Replace with Radio button to select true or false value
+           <!--Third Party Vendors-->
+            <div class="col-sm-12 col-form-label mb-3">
+              <label for="third_party_vendors">Minimum Occupancy</label>
+              <input type="third_party_vendors" class="form-control" id="third_party_vendors" placeholder="Does " />
+            </div> --}}
+            {{!-- <div class="form-check">Does this venue accept 3rd party vendors?
+              <br>
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+             <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+              </label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                No
+              </label>
+            </div> --}}
+
+
+          <!--Submit Button-->
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary mb-3">Create Venue</button>
+            </div>
+            </form>
+            </div>
+
+
 {{!-- <a href="/cards/{{post.id}}"></a> --}}
 
-  <form class="new-post-form">
-    <div>
-      <label for="title">Title</label>
-      <input type="text" id="title" name="title" />
-    </div>
-    <div>
-      <label for="url">Link</label>
-      <input id="url" name="url" />
-    </div>
-    <button type="submit" class="btn btn-md btn-primary m-2">Create</button>
-  </form>
 
-  </div>
-</main>
-<div class="col-lg-9">
-  <div class="row m-1">
+<div class="col-lg-6">
       <h2 class="text-center mt-3">Venues</h2>
         {{#if dvenues.length}}
           <ol>
@@ -37,7 +116,9 @@
             {{/each}}
           </ol>
         {{/if}}
+               
  </div>
 </section>
 <script src="/javascript/addcard.js"></script>
+
 
