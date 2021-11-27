@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
 const { User, Venuetype, Venues } = require("../models");
-const { venues } = require("../models/venues");
 const withAuth = require('../utils/auth');
 
 //Get all venues for dashboard
