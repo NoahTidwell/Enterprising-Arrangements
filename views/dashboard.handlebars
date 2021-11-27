@@ -29,10 +29,9 @@
   <div class="row m-1">
       <h2 class="text-center mt-3">Venues</h2>
     <div class="row row-cols-1 row-cols-md-4 g-4">
-
+  {{#each dvenues as |venue|}}
 {{>single-card}}
-{{>single-card}}
-{{>single-card}}
+{{/each}}
 
 
  {{!-- <div class="col">
