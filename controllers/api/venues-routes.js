@@ -81,7 +81,7 @@ router.post("/", (req, res) => {
     max: req.body.max,
     third_party_vendors: req.body.third_party_vendors,
     venuetype_id: req.body.venuetype_id,
-    user_id: req.body.user_id,
+    user_id: req.session.user_id,
   })
     .then((dbUserData) => {
       res.json(dbUserData);
@@ -97,16 +97,6 @@ router.put("/:id", (req, res) => {
   Venues.update(req.body, {
     where: {
       id: req.params.id,
-      url: req.body.url,
-      street: req.body.street,
-      city: req.body.city,
-      state: req.body.state,
-      zipcode: req.body.zipcode,
-      min: req.body.min,
-      max: req.body.max,
-      third_party_vendors: req.body.third_party_vendors,
-      venuetype_id: req.body.venuetype_id,
-      user_id: req.body.user_id,
     },
   })
     .then((dbData) => {
