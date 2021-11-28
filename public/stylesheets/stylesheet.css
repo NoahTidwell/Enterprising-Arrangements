@@ -5,10 +5,20 @@
   background-size: cover;
 }
 
-.login-form {
-  justify-content: center;
+.background-signup {
+  background-image: url("../images/hall2.jpg");
+  max-width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.card-shadow {
-  box-shadow: 2px 2px 2px 2px #000088;
+.background-login {
+  background-image: url("../images/hall3.jpg");
+  max-width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-form {
+  justify-content: center;
 }
