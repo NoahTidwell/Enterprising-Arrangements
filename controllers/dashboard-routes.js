@@ -1,9 +1,10 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
 const { User, Venuetype, Venues } = require("../models");
+const { venues } = require("../models/venues");
 const withAuth = require("../utils/auth");
 
-//Get all venues for a logged in user
+//Get all venues for a logged in user to display on dash board
 //router.get('/', withAuth, (req, res) => {
 router.get("/", (req, res) => {
   console.log("======================");
@@ -30,9 +31,19 @@ router.get("/", (req, res) => {
     ],
   })
     .then((dbData) => {
-      const dvenues = dbData.map((post) => post.get({ plain: true }));
-      console.log(dvenues);
-      res.render("dashboard", { dvenues, loggedIn: true });
+      const uservenues = dbData.map((post) => post.get({ plain: true }));
+      Venuetype.findAll({
+      })
+      .then((dbtypes) =>{
+        const tvenues = dbtypes.map((post) => post.get({ plain: true }));
+        const dvenues = {
+          // Include the user venues and all type venues to be sent over to dashboard.handlebars
+          venues: uservenues,
+          typevenues: tvenues,
+        };
+        console.log(dvenues);
+        res.render("dashboard", { dvenues, loggedIn: true });
+      });
     })
     .catch((err) => {
       console.log(err);
