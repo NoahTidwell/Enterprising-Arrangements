@@ -2,6 +2,7 @@ async function newFormHandler(event) {
   event.preventDefault();
 
   const name = document.querySelector("#name").value;
+  const venuetype = document.querySelector("#venuetype").value;
   const url = document.querySelector("#url").value;
   const street = document.querySelector("#street").value;
   const city = document.querySelector("#city").value;
@@ -22,6 +23,7 @@ async function newFormHandler(event) {
     method: "POST",
     body: JSON.stringify({
       name,
+      venuetype,
       url,
       street,
       city,

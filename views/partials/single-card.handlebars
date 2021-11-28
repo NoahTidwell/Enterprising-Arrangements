@@ -1,28 +1,50 @@
-<div
-  class="card m-3 card-border border-1 shadow-sm mb-5 bg-body rounded"
-  style="max-width: 25rem;"
->
-  <h5 class="card-header text-center text-white bg-primary">{{name}}</h5>
-  <h6 class="text-center">{{venuetype.type_name}}</h6>
-  <p class="card-text">{{venuetype.description}}</p>
-  <div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item text-center"><a href=" {{url}} ">
-          {{url}}
-        </a></li>
-      <li class="list-group-item list-group-flush">{{street}},
-        {{city}},
-        {{state}},
-        {{zipcode}}</li>
-      <li class="list-group-item list-group-flush">Min Occupancy:
-        {{min}}</li>
-      <li class="list-group-item list-group-flush">Max Occupancy:
-        {{max}}</li>
-      <li class="list-group-item list-group-flush">Third party vendors:
-        {{third_party_vendors}}</li>
-      <!-- <li class="list-group-item list-group-flush"></li> -->
-    </ul>
-    <div class="card-footer"></div>
+<div class="col d-flex justify-content-center">
+  <div
+    class="card m-3 card-border border-1 shadow-sm mb-5 bg-body rounded"
+    style="max-width: 25rem;"
+  >
+    <h5 class="card-header text-center text-white bg-primary">
+      {{name}}
+    </h5>
+    <h6 class="text-center">
+      {{venuetype.type_name}}
+    </h6>
+    <p class="card-text">
+      {{venuetype.description}}
+    </p>
+    <div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-center">
+          <a href="{{url}}">
+            {{url}}
+          </a>
+        </li>
+        <li class="list-group-item list-group-flush">
+          {{street}}
+          ,
+          {{city}}
+          ,
+          {{state}}
+          ,
+          {{zipcode}}
+        </li>
+        <li class="list-group-item list-group-flush">
+          Min Occupancy:
+          {{min}}
+        </li>
+        <li class="list-group-item list-group-flush">
+          Max Occupancy:
+          {{max}}
+        </li>
+        <li class="list-group-item list-group-flush">
+          Third party vendors:
+          {{third_party_vendors}}
+        </li>
+        <!-- <li class="list-group-item list-group-flush"></li> -->
+      </ul>
+      <div class="card-footer">
+        <div></div>
+      </div>
+    </div>
   </div>
 </div>
-

@@ -1,17 +1,133 @@
-<article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
-    Edit Venue
-  </h2>
-  <form class="edit-post-form">
-    <div>
-      <input name="title" type="text" value="{{dvenues.title}}" />
-      
-    </div>
-      <button type="submit">Save Venue</button>
-    <button type="button" class="delete-post-btn">Delete Venue</button>
-  </form>
-</article>
+<section class="container-md">
+  <article class="row-col-12">
+    <div class="card m-3 shadow mb-5 bg-body rounded">
+      <div class="card-body bg-light">
+            <h2 class="text-center text-white bg-primary rounded-3 span">
+      Edit Venue
+    </h2>
+    <form class="edit-post-form text-center">
+      <label for="name" class="form-label">
+        Name:
+      </label>
+      <input
+        name="name"
+        id="name"
+        class="col-sm-12  mb-3 rounded-3"
+        type="text"
+        value="{{dvenues.name}}"
+      />
+      <label for="venuetype" class="form-label">
+        Description:
+      </label>
+      <textarea
+        name="#venuetype"
+        id="venuetype"
+        type="text"
+        class="col-sm-12  mb-3 rounded-3"
+        rows="3"
+        placeholder="{{dvenues.venuetype.description}}"
+        value="{{dvenues.venuetype.description}}"
+      ></textarea>
+      <label for="url" class="form-label">
+        Website Address:
+      </label>
+      <input
+        name="url"
+        id="url"
+        type="text"
+        class="col-sm-12  mb-3 rounded-3"
+        value="{{dvenues.url}}"
+      />
+      <label for="street" class="form-label">
+        Street Number:
+      </label>
+      <input
+        name="street"
+        id="street"
+        type="text"
+        class="col-sm-12  mb-3 rounded-3"
+        value="{{dvenues.street}}"
+      />
+      <label for="city" class="form-label">
+        City
+      </label>
+      <input
+        name="city"
+        id="city"
+        type="text"
+        class="col-sm-12  mb-3 rounded-3"
+        value="{{dvenues.city}}"
+      />
+      <label for="state" class="form-label">
+        State:
+      </label>
+      <input
+        name="state"
+        id="state"
+        type="text"
+        class="col-sm-12  mb-3 rounded-3"
+        value="{{dvenues.state}}"
+      />
+      <label for="" class="form-label">
+        Zipcode:
+      </label>
+      <input
+        name="zipcode"
+        id="zipcode"
+        type="text"
+        class="col-sm-12  mb-3 rounded-3"
+        value="{{dvenues.zipcode}}"
+      />
+      <label for="min" class="form-label">
+        Minimum number of Guest allowed:
+      </label>
+      <input
+        name="min"
+        id="min"
+        type="text"
+        class="col-sm-12  mb-3 rounded-3"
+        value="{{dvenues.min}}"
+      />
+      <label for="max" class="form-label">
+        Maximum number of Guest allowed:
+      </label>
+      <input
+        name="max"
+        id="max"
+        type="text"
+        class="col-sm-12  mb-3 rounded-3"
+        value="{{dvenues.max}}"
+      />
+      <label for="third_party_vendors" class="form-label">
+        Third Party Venders:
+      </label>
+      <input
+        name="third_party_vendors"
+        type="text"
+        class="col-sm-12  mb-3 rounded-3"
+        value="{{dvenues.third_party_vendors}}"
+      />
+
+<hr class="m-3"></hr>
+
+      <button class="btn btn-dark btn-lg btn-outline-dark">
+        <a href="/dashboard">
+          Back to dashboard
+        </a>
+      </button>
+      <button type="submit" class="btn btn-success btn-lg btn-outline-dark">
+        Save Venue
+      </button>
+      <button
+        type="button"
+        class="delete-post-btn btn btn-danger btn-lg btn-outline-dark"
+      >
+        Delete Venue
+      </button>
+    </form>
+</div>
+  </article>
+</section>
 
 <script src="/javascript/editcard.js"></script>
 <script src="/javascript/deletecard.js"></script>
