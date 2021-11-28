@@ -9,6 +9,7 @@ router.get("/", (req, res) => {
       attributes: [
         "id",
         "name",
+        "comments",
         "url",
         "street",
         "city",
@@ -40,6 +41,7 @@ router.get("/:id", (req, res) => {
       attributes: [
         "id",
         "name",
+        "comments",
         "url",
         "street",
         "city",

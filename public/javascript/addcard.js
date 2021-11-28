@@ -2,6 +2,7 @@ async function newFormHandler(event) {
   event.preventDefault();
 
   const name = document.querySelector("#name").value;
+  const comments = document.querySelector("#comments").value;
   const venuetype_id= document.getElementById("venuetype").value
   const url = document.querySelector("#url").value;
   const street = document.querySelector("#street").value;
@@ -25,6 +26,7 @@ async function newFormHandler(event) {
     method: "POST",
     body: JSON.stringify({
       name,
+      comments,
       venuetype_id,
       url,
       street,

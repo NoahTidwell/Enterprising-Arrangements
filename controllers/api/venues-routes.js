@@ -72,6 +72,7 @@ router.post("/", (req, res) => {
   // expects {username: 'Lernantino', password: 'password1234'}
   Venues.create({
     name: req.body.name,
+    comments: req.body.comments,
     url: req.body.url,
     street: req.body.street,
     city: req.body.city,

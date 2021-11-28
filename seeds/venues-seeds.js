@@ -5,6 +5,7 @@ const venuesdata = [
   {
     name: 'THE WESTIN SNOWMASS RESORT',
     url: 'https://www.gosnowmass.com/groups-meetings/meeting-spaces/',
+    comments: 'Great place to ski colorado',
     street: '25 Daly Lane',
     city: 'Snowmass Village',
     state: 'CO',
@@ -17,6 +18,7 @@ const venuesdata = [
   },
   {
     name: 'K1 SPEED',
+    comments: 'Great place to ski houston',
     url: 'https://www.k1speed.com/houston-location.html',
     street: '14900 NORTHWEST FWY',
     city: 'HOUSTON',
@@ -30,6 +32,7 @@ const venuesdata = [
   },
   {
     name: 'K1 SPEED',
+    comments: 'Great place to ski in san antonio',
     url: 'https://www.k1speed.com/san-antonio-location.html',
     street: '6955 NORTHWEST LOOP',
     city: 'SAN ANTONIO',
