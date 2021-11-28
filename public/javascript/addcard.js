@@ -13,20 +13,14 @@ async function newFormHandler(event) {
 
   //validate yes or not on Third party vendor  
   const rbs = document.querySelectorAll('input[name="flexRadioDefault"]');
-    let selectedValue;
-    for (const rb of rbs) {
+  for (const rb of rbs) {
         if (rb.checked) {
             third_party_vendors = parseInt(rb.value);
             break;
         }
     }
-    
-  // const  = document.querySelector('input[name=""]').value;
-  // const  = document.querySelector('input[name=""]').value;
-  // const  = document.querySelector('input[name=""]').value;
-  // const  = document.querySelector('input[name=""]').value;
-
-  const response = await fetch(`/api/venues`, {
+//save data on db
+    const response = await fetch(`/api/venues`, {
     method: "POST",
     body: JSON.stringify({
       name,
