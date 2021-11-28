@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 const { User, Venuetype, Venues } = require("../models");
 const withAuth = require("../utils/auth");
 
-//Get all venues for dashboard
+//Get all venues for a logged in user
 //router.get('/', withAuth, (req, res) => {
 router.get("/", (req, res) => {
   console.log("======================");

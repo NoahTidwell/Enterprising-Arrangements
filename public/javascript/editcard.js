@@ -10,6 +10,7 @@ async function editFormHandler(event) {
   const zipcode = document.querySelector("#zipcode").value.trim();
   const min = document.querySelector("#min").value.trim();
   const max = document.querySelector("#max").value.trim();
+  
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
