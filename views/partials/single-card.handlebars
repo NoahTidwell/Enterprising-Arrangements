@@ -10,7 +10,7 @@
       {{venuetype.type_name}}
     </h6>
     <p class="card-text">
-      {{venuetype.description}}
+      {{comments}}
     </p>
     <div>
       <ul class="list-group list-group-flush">
@@ -37,8 +37,11 @@
           {{max}}
         </li>
         <li class="list-group-item list-group-flush">
-          Third party vendors:
-          {{third_party_vendors}}
+          {{#if third_party_vendors}}
+            Third party vendors: Yes
+          {{else}}
+            Third party vendors: No
+          {{/if}}
         </li>
         <!-- <li class="list-group-item list-group-flush"></li> -->
       </ul>
