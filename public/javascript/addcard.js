@@ -10,6 +10,7 @@ async function newFormHandler(event) {
   const zipcode = document.querySelector("#zipcode").value;
   const min = document.querySelector("#min").value;
   const max = document.querySelector("#max").value;
+
   // const third_party_vendors = document.querySelector(
   //   'input[name="third_party_vendors"]'
   // ).value;
