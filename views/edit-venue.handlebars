@@ -98,15 +98,35 @@
         class="col-sm-12  mb-3 rounded-3"
         value="{{dvenues.max}}"
       />
-      <label for="third_party_vendors" class="form-label">
-        Third Party Venders:
-      </label>
-      <input
-        name="third_party_vendors"
-        type="text"
-        class="col-sm-12  mb-3 rounded-3"
-        value="{{dvenues.third_party_vendors}}"
-      />
+      {{#if dvenues.third_party_vendors}}
+         <div class="form-check">Does this venue accept 3rd party vendors?
+           <br>
+            <input class="form-check-input" type="radio" name="flexRadioDefault" value="1" id="flexRadioDefault1" checked>
+            <label class="form-check-label" for="flexRadioDefault1">
+             Yes
+            </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="flexRadioDefault" value="0" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                No
+              </label>
+          </div>
+         {{else}}
+          <div class="form-check">Does this venue accept 3rd party vendors?
+            <br>
+             <input class="form-check-input" type="radio" name="flexRadioDefault" value="1" id="flexRadioDefault1">
+             <label class="form-check-label" for="flexRadioDefault1">
+              Yes
+              </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" value="0" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                No
+              </label>
+          </div>
+          {{/if}}
 
 <hr class="m-3"></hr>
 

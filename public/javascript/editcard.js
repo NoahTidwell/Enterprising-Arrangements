@@ -14,6 +14,15 @@ async function editFormHandler(event) {
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
+
+   //validate yes or not on Third party vendor  
+   const rbs = document.querySelectorAll('input[name="flexRadioDefault"]');
+   for (const rb of rbs) {
+         if (rb.checked) {
+             third_party_vendors = parseInt(rb.value);
+             break;
+         }
+     }
   const response = await fetch(`/api/venues/${id}`, {
     method: "PUT",
     body: JSON.stringify({
@@ -26,6 +35,7 @@ async function editFormHandler(event) {
       zipcode,
       min,
       max,
+      third_party_vendors,
     }),
     headers: {
       "Content-Type": "application/json",
