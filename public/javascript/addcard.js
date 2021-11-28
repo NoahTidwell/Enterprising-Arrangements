@@ -11,10 +11,16 @@ async function newFormHandler(event) {
   const min = document.querySelector("#min").value;
   const max = document.querySelector("#max").value;
 
-  // const third_party_vendors = document.querySelector(
-  //   'input[name="third_party_vendors"]'
-  // ).value;
-
+  //validate yes or not on Third party vendor  
+  const rbs = document.querySelectorAll('input[name="flexRadioDefault"]');
+    let selectedValue;
+    for (const rb of rbs) {
+        if (rb.checked) {
+            third_party_vendors = parseInt(rb.value);
+            break;
+        }
+    }
+    
   // const  = document.querySelector('input[name=""]').value;
   // const  = document.querySelector('input[name=""]').value;
   // const  = document.querySelector('input[name=""]').value;
@@ -32,6 +38,7 @@ async function newFormHandler(event) {
       zipcode,
       min,
       max,
+      third_party_vendors,
     }),
     headers: {
       "Content-Type": "application/json",
