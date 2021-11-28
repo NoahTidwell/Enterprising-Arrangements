@@ -19,8 +19,10 @@
       </div>
 <br><br>
 <div class="row bg-dark rounded-3" id="target">
-        {{#if dvenues.length}}
-            {{#each dvenues as |venue|}}
+        <!--dvenues include two objects user venues and all type venues-->
+        {{#if dvenues.venues.length}}
+            {{#each dvenues.venues as |venue|}}
+            <!--generate all user Venue cards-->
               {{>single-card venue}}
               <div class="col-1 mt-3">
                 <button type="button" class="editBtn btn btn-rounded-3 rounded-3 mb-3 bg-primary  text-white" id={{venue.id}}>Edit Venue</button>
@@ -50,11 +52,16 @@
             <div class="col-sm-12 col-form-label mb-3">
               <label for="venuetype.type_name">Type of Venue: </label>
               <select id="venuetype">
-                  <option value="0">select your Venue Type</option>
+                {{#if dvenues.typevenues.length}}
+                   {{#each dvenues.typevenues as |typevenues|}}
+                    <!--generate all type Venues options-->
+                        <option value={{typevenues.id}}>{{typevenues.type_name}}</option>
+                    {{/each}}
+                  {{/if}}
               </select>
             </div>
 
-                        <!--Description Type-->
+            <!--Description Type-->
             <div class="col-sm-12 col-form-label mb-3">
               <label for="venuetype.type_name">Description of Venue:</label>
               <textarea type="venuetype.type_name" id="venuetype" placeholder="Enter a description of your Venue" class="form-control" rows="5"></textarea>

@@ -2,7 +2,7 @@ async function newFormHandler(event) {
   event.preventDefault();
 
   const name = document.querySelector("#name").value;
-  const venuetype = document.querySelector("#venuetype").value;
+  const venuetype_id= document.getElementById("venuetype").value
   const url = document.querySelector("#url").value;
   const street = document.querySelector("#street").value;
   const city = document.querySelector("#city").value;
@@ -19,12 +19,13 @@ async function newFormHandler(event) {
             break;
         }
     }
-//save data on db
+
+    //save data on db
     const response = await fetch(`/api/venues`, {
     method: "POST",
     body: JSON.stringify({
       name,
-      venuetype,
+      venuetype_id,
       url,
       street,
       city,
