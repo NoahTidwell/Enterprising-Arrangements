@@ -32,9 +32,7 @@ router.get("/", (req, res) => {
   })
     .then((dbData) => {
       const uservenues = dbData.map((post) => post.get({ plain: true }));
-      Venuetype.findAll({
-      })
-      .then((dbtypes) =>{
+      Venuetype.findAll({}).then((dbtypes) => {
         const tvenues = dbtypes.map((post) => post.get({ plain: true }));
         const dvenues = {
           // Include the user venues and all type venues to be sent over to dashboard.handlebars
@@ -54,6 +52,9 @@ router.get("/", (req, res) => {
 //router.get('/edit/:id', withAuth, (req, res) => {
 router.get("/edit/:id", (req, res) => {
   Venues.findByPk(req.params.id, {
+    where: {
+      user_id: req.session.user_id,
+    },
     include: [
       {
         model: Venuetype,
