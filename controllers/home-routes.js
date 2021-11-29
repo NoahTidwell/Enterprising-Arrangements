@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const sequelize = require('../config/connection');
-const {User, Venuetype, Venues } = require("../models");
+const sequelize = require("../config/connection");
+const { User, Venuetype, Venues } = require("../models");
 
 //Get ALL cards:
 router.get("/", (req, res) => {

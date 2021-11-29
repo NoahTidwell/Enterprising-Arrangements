@@ -1,14 +1,22 @@
-<section class="container-md">
-  <article class="row-col-12">
-    <div class="card m-3 shadow mb-5 bg-body rounded">
+<section class="container-fluid background-edit">
+  <article class="row">
+    <div class="d-flex justify-content-center">
+      
+      
+      <!--Begin card body:-->
+  <div class="card m-3 rounded">
+    <div class="card-header bg-primary">
+      <h2 class="text-center text-white">
+        Edit Venue
+      </h2>
+      </div>
       <div class="card-body bg-light">
-            <h2 class="text-center text-white bg-primary rounded-3 span">
-      Edit Venue
-    </h2>
+            
     <form class="edit-post-form text-center">
       <label for="name" class="form-label">
         Name:
       </label>
+      <br>
       <input
         name="name"
         id="name"
@@ -16,9 +24,10 @@
         type="text"
         value="{{dvenues.name}}"
       />
-      <label for="comments" class="form-label">
+      <label for="comments" class="form-label mt-3">
         Description:
       </label>
+      <br>
       <textarea
         name="#comments"
         id="comments"
@@ -31,6 +40,7 @@
       <label for="url" class="form-label">
         Website Address:
       </label>
+      <br>
       <input
         name="url"
         id="url"
@@ -41,6 +51,7 @@
       <label for="street" class="form-label">
         Street Number:
       </label>
+      <br>
       <input
         name="street"
         id="street"
@@ -49,8 +60,9 @@
         value="{{dvenues.street}}"
       />
       <label for="city" class="form-label">
-        City
+        City:
       </label>
+      <br>
       <input
         name="city"
         id="city"
@@ -61,6 +73,7 @@
       <label for="state" class="form-label">
         State:
       </label>
+      <br>
       <input
         name="state"
         id="state"
@@ -70,7 +83,9 @@
       />
       <label for="" class="form-label">
         Zipcode:
+        
       </label>
+      <br>
       <input
         name="zipcode"
         id="zipcode"
@@ -80,7 +95,9 @@
       />
       <label for="min" class="form-label">
         Minimum number of Guest allowed:
+        
       </label>
+      <br>
       <input
         name="min"
         id="min"
@@ -91,6 +108,7 @@
       <label for="max" class="form-label">
         Maximum number of Guest allowed:
       </label>
+      <br>
       <input
         name="max"
         id="max"
@@ -142,10 +160,10 @@
         <a class="btn btn-primary btn-lg btn-outline-dark text-light" href="/dashboard">
           Cancel
         </a>
-</div>
+      </div>
     </form>
-</div>
-  </article>
+    </div>
+  </div>
+</article>
 </section>
-
 <script src="/javascript/editcard.js"></script>

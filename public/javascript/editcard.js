@@ -10,19 +10,19 @@ async function editFormHandler(event) {
   const zipcode = document.querySelector("#zipcode").value.trim();
   const min = document.querySelector("#min").value.trim();
   const max = document.querySelector("#max").value.trim();
-  
+
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
 
-   //validate yes or not on Third party vendor  
-   const rbs = document.querySelectorAll('input[name="flexRadioDefault"]');
-   for (const rb of rbs) {
-         if (rb.checked) {
-             third_party_vendors = parseInt(rb.value);
-             break;
-         }
-     }
+  //validate yes or not on Third party vendor
+  const rbs = document.querySelectorAll('input[name="flexRadioDefault"]');
+  for (const rb of rbs) {
+    if (rb.checked) {
+      third_party_vendors = parseInt(rb.value);
+      break;
+    }
+  }
   const response = await fetch(`/api/venues/${id}`, {
     method: "PUT",
     body: JSON.stringify({
