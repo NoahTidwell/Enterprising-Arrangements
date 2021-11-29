@@ -63,8 +63,8 @@ Venues.init(
         len: [1],
       },
     },
-    comments:{
-      type: DataTypes.STRING(50),
+    comments: {
+      type: DataTypes.STRING(500),
       allowNull: false,
       validate: {
         len: [1],

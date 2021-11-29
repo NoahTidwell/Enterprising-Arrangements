@@ -25,20 +25,6 @@
         value="{{dvenues.name}}"
       />
 
-            <!--Venue Type-->
-            <div class="col-sm-12 col-form-label mb-3">
-              <label for="venuetype.type_name">Type of Venue: </label>
-              <select id="venuetype">
-                {{#if dvenues.typevenues.length}}
-                   {{#each dvenues.typevenues as |typevenues|}}
-                    <!--generate all type Venues options-->
-                        <option value={{typevenues.id}}>{{typevenues.type_name}}</option>
-                    {{/each}}
-                  {{/if}}
-              </select>
-            </div>
-
-
       <label for="comments" class="form-label mt-3">
         Description:
       </label>
