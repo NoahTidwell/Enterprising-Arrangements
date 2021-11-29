@@ -19,10 +19,21 @@
   background-size: cover;
 }
 
+.background-edit {
+  background-image: url("../images/hall4.jpg");
+  max-width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .navbar-title {
   text-shadow: 2px, 2px, rgb(255, 0, 0);
 }
 
 .login-form {
   justify-content: center;
+}
+
+.background-grey {
+  background-color: rgb(231, 231, 231);
 }
