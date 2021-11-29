@@ -52,6 +52,9 @@ router.get("/", (req, res) => {
 //router.get('/edit/:id', withAuth, (req, res) => {
 router.get("/edit/:id", (req, res) => {
   Venues.findByPk(req.params.id, {
+    where: {
+      user_id: req.session.user_id,
+    },
     include: [
       {
         model: Venuetype,
@@ -86,4 +89,5 @@ router.get("/edit/:id", (req, res) => {
     });
 });
 
+//Route
 module.exports = router;
