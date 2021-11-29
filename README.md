@@ -1,7 +1,7 @@
 # Enterprising Arrangements
 
 ## Demo Link:
-[Enterprising Arrangements Link](https://immense-thicket-65501.herokuapp.com/)
+[Enterprising Arrangements Link](https://enterprising-arrangements.herokuapp.com/)
 
 ## Licensing:
 [![license](https://img.shields.io/badge/license-MIT-blue)](https://shields.io)
