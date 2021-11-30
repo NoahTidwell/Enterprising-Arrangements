@@ -5,8 +5,7 @@ const { venues } = require("../models/venues");
 const withAuth = require("../utils/auth");
 
 //Get all venues for a logged in user to display on dash board
-//router.get('/', withAuth, (req, res) => {
-router.get("/", (req, res) => {
+router.get('/', withAuth, (req, res) => {
   console.log("======================");
   Venues.findAll({
     where: {
@@ -49,8 +48,7 @@ router.get("/", (req, res) => {
     });
 });
 
-//router.get('/edit/:id', withAuth, (req, res) => {
-router.get("/edit/:id", (req, res) => {
+router.get('/edit/:id', withAuth, (req, res) => {
   Venues.findByPk(req.params.id, {
     where: {
       user_id: req.session.user_id,
