@@ -9,31 +9,105 @@
 
 </a>
 
-<div class="col-7 col-lg-7 col-md-12 col-sm-12 mt-0">
+<div class="col-lg-7 col-md-12 col-sm-12 mt-3">
+      <h2 class="text-center bg-light rounded-3">Your Venues</h2>
   <div class="m-3">
 
+{{!-- <div class="row"> --}}
 
-<div class="row">
 <div class="row bg-dark rounded-3" id="target">
-        <h2 class="mt-3 text-center bg-light rounded-3">Venues</h2>
-        <!--dvenues include two objects user venues and all type venues-->
-        {{#if dvenues.venues.length}}
+
+  
+
+          {{#if dvenues.venues.length}}
             {{#each dvenues.venues as |venue|}}
-            <!--generate all user Venue cards-->
-              {{>single-card venue}}
-              <div class="col-1 mt-3">
-                <button type="button" class="editBtn btn btn-rounded-3 rounded-3 mb-3 bg-primary  text-white" id={{venue.id}}>Edit Venue</button>
-                <button type="button" class="delBtn btn btn-rounded-3 rounded-3 mb-3 bg-primary  text-white" id={{venue.id}}>Delete Venue</button>
-              </div>
+
+<div
+    class="card m-2 card-border border-1 mb-5 rounded,"
+    style="max-width: 20rem;"> 
+
+    <h5 class="card-header text-center text-white bg-primary">
+      {{name}}
+    </h5>
+
+  <div>
+    <h6 class="text-center">
+      {{venuetype.type_name}}
+    </h6>
+  </div>
+  <div>
+    <p class="card-text">
+      {{comments}}
+    </p>
+  <div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-center">
+          <a href="{{url}}">
+            {{url}}
+          </a>
+        </li>
+        <li class="list-group-item list-group-flush">
+          {{street}}
+          ,
+          <br>
+          {{city}}
+          ,
+          <br>
+          {{state}}
+          ,
+          {{zipcode}}
+        </li>
+        <li class="list-group-item list-group-flush">
+          Min Occupancy:
+          {{min}}
+        </li>
+        <li class="list-group-item list-group-flush">
+          Max Occupancy:
+          {{max}}
+        </li>
+        <li class="list-group-item list-group-flush">
+          {{#if third_party_vendors}}
+            Third party vendors: Yes
+          {{else}}
+            Third party vendors: No
+          {{/if}}
+        </li>
+  
+  </div>
+      
+      <div class="card-footer bg-white">
+        <button
+          type="button"
+          class="editBtn btn btn-rounded-3 rounded-3 m-1 bg-primary  text-white"
+          id={{venue.id}}
+        >
+          Edit Venue
+        </button>
+        <button
+          type="button"
+          class="delBtn btn btn-rounded-3 rounded-3 m-1 bg-primary  text-white"
+          id={{venue.id}}
+        >
+          Delete Venue
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
             {{/each}}
         {{/if}}
-    </div>        
- </div>
-</div>
-</div>
+          </div>
+        </div>
+      </div>
+
+
+
+
 
 <!--Form Data-->
-       <div class="col-lg-4 mt-4 m-5 background-grey rounded-2 ">
+       <div class="col-lg-4 col-sm-12 ml-2 mt-3 background-grey rounded-2 ">
 
   <h2 class="text-center">Create New Venue</h2>
   <p class="text-center">Enter your details below to create a new venue</p>
@@ -131,7 +205,7 @@
 
           <!--Submit Button-->
             <div class="col-sm-10">
-              <a href="/cards/{{venue.id}}"><button type="submit" class="btn btn-primary mb-3">Create Venue</button></a>
+              <a href="/dashboard/{{venue.id}}"><button type="submit" class="btn btn-primary mb-3">Create Venue</button></a>
             </div>
             </form>
 </div>

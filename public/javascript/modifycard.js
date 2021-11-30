@@ -4,17 +4,17 @@ async function deleteFormHandler(event) {
   if (targetEl.matches(".delBtn")) {
     var id = targetEl.id;
     const response = await fetch(`/api/venues/${id}`, {
-        method: 'DELETE'
+      method: "DELETE",
     });
     if (response.ok) {
-       document.location.replace('/dashboard/');
+      document.location.replace("/dashboard/");
     } else {
       alert(response.statusText);
     }
   }
   if (targetEl.matches(".editBtn")) {
     var id = targetEl.id;
-    document.location.replace(`/dashboard/edit/${id}`)
+    document.location.replace(`/dashboard/edit/${id}`);
   }
 }
-document.querySelector("#target").addEventListener('click', deleteFormHandler);
+document.querySelector("#target").addEventListener("click", deleteFormHandler);

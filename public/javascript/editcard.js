@@ -3,7 +3,6 @@ async function editFormHandler(event) {
 
   const name = document.querySelector("#name").value.trim();
   const comments = document.querySelector("#comments").value;
-  const venuetype_id = document.getElementById("venuetype").value;
   const url = document.querySelector("#url").value.trim();
   const street = document.querySelector("#street").value.trim();
   const city = document.querySelector("#city").value.trim();
@@ -28,7 +27,6 @@ async function editFormHandler(event) {
     method: "PUT",
     body: JSON.stringify({
       name,
-      venuetype_id,
       comments,
       url,
       street,
