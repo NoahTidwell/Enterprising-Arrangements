@@ -1,4 +1,4 @@
-# Enterprising Arrangements
+# Enterprising-Arrangements
 
 ## Demo Link:
 [Enterprising Arrangements Link](https://enterprising-arrangements1.herokuapp.com/)
@@ -12,26 +12,27 @@
 - [Usage](#usage)
 - [Contribution](#contribution)
 - [Testing](#testing)
-- [Additional Info](#additional-info)
+- [Contact Info](#contact-info)
 
 ## Description:
-GIVEN a CMS-style venue search application
+GIVEN a CMS-style venue application
 <br /> WHEN I visit the site for the first time 
-<br /> THEN I am presented with a homepage and an existing venue
-<br /> WHEN I click on Home
-<br /> THEN I am taken to the Homepage
+<br /> THEN I am presented with a homepage and an existing venue(s)
+<br /> WHEN I click on Sign-Up
+<br /> THEN I am taken to the Sign Up Page and prompted with several required inputs
 <br /> WHEN I click Dahsboard
-<br /> THEN I am taken to the Dashboard Page 
-<br /> WHEN I click Sign Up 
-<br /> THEN I am taken to the Sign Up Page and prompted with several required inputs <br /> WHEN I create an account 
-<br /> THEN I can sign in and post, edit, or delete venues from the site
-<br /> WHEN I click sign out 
+<br /> THEN I am taken to the User's Dashboard Page and can post, edit, or delete venues from the site
+<br /> WHEN I click Sign In 
+<br /> THEN I can login to an existing account and access pre-exisiting venues  
+<br /> WHEN I click Sign Out 
 <br /> THEN My session ends and I no longer have access to creating, editing, or deleting venues from the site.
 
 ## Installation:
 This application uses node.js, express, mysql2,sequelize, and dotenv modules. To install necessary dependecies, run the following commands:
 <br />
 <br />
+<br />
+Clone the Repository
 <br />
 npm install mysql2
 <br />
