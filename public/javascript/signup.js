@@ -37,6 +37,7 @@ async function signupFormHandler(event) {
       document.location.replace("/");
     } else {
       alert(response.statusText);
+      alert("Please fill all field before signing up")
     }
   }
 }
