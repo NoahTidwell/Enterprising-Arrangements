@@ -46,7 +46,7 @@ async function editFormHandler(event) {
     document.location.replace("/dashboard/");
   } else {
     //alert(response.statusText);
-    alert("Please fill all field before updating")
+    alert("Please fill out all information before updating")
   }
 }
 
