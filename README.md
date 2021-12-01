@@ -24,7 +24,7 @@ GIVEN a CMS-style venue application
 <br /> THEN I am taken to the User's Dashboard Page and can post, edit, or delete venues from the site
 <br /> WHEN I click Sign In 
 <br /> THEN I can login to an existing account and access pre-exisiting venues  
-<br /> WHEN I click Sign Out 
+WHEN I click Sign Out 
 <br /> THEN My session ends and I no longer have access to creating, editing, or deleting venues from the site.
 
 ## Installation:
