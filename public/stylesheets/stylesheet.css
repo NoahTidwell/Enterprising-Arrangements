@@ -34,6 +34,10 @@
   justify-content: center;
 }
 
+.center-items {
+  text-align: center;
+}
+
 .background-grey {
   background-color: rgb(231, 231, 231);
 }
